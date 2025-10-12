@@ -1,0 +1,28 @@
+[project]
+name = "llm_playground"
+version = "0.1.0"
+description = "Environment migrated from environment.yml for uv"
+requires-python = ">=3.11"
+
+dependencies = [
+    "ipykernel",
+    "jupyterlab",
+    "ipywidgets",
+    "torch==2.7.0",
+    "transformers==4.52.0",
+    "datasets==3.6.0",
+    "evaluate==0.4.3",
+    "tiktoken==0.9.0",
+    "accelerate==1.7.0",
+    "sentencepiece==0.2.0",
+    "ipython==9.2.0",
+    "huggingface_hub==0.31.4"
+]
+
+[tool.uv]
+python-preference = "only-managed"   # Only use the uv-managed Python version
+required-environments = ["macosx_14_0_x86_64"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
